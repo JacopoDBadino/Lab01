@@ -31,6 +31,25 @@ public class FXMLController {
 
 	@FXML
 	private Button btnReset;
+	
+	 @FXML
+	    private Button cancelButton;
+
+	    @FXML
+	    void cancellaParola(ActionEvent event) {
+			String parolaNuova = txtParola.getText();
+			elenco.deleteParole(parolaNuova);
+			
+			String testoFinale = "";
+			for (String s : elenco.getElenco())
+				if (testoFinale.equals(""))
+					testoFinale += s;
+				else
+					testoFinale += "\n" + s;
+			
+			txtResult.setText(testoFinale);
+			return;
+	    }
 
 	@FXML
 	void doInsert(ActionEvent event) {
@@ -53,6 +72,7 @@ public class FXMLController {
 	void doReset(ActionEvent event) {
 		elenco.reset();
 		txtResult.setText("");
+		return;
 	}
 
 	@FXML
@@ -61,7 +81,8 @@ public class FXMLController {
 		assert btnInserisci != null : "fx:id=\"btnInserisci\" was not injected: check your FXML file 'Scene.fxml'.";
 		assert txtResult != null : "fx:id=\"txtResult\" was not injected: check your FXML file 'Scene.fxml'.";
 		assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Scene.fxml'.";
-
+		assert cancelButton != null : "fx:id=\"cancelButton\" was not injected: check your FXML file 'Scene.fxml'.";
+		
 		elenco = new Parole();
 	}
 }
