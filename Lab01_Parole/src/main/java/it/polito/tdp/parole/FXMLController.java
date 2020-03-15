@@ -14,6 +14,8 @@ public class FXMLController {
 	
 	Parole elenco ;
 
+	//prova commit
+	
     @FXML
     private ResourceBundle resources;
 
