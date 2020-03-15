@@ -27,7 +27,8 @@
                   <Button fx:id="btnInserisci" mnemonicParsing="false" onAction="#doInsert" text="Inserisci" />
                </children>
             </HBox>
-            <TextArea fx:id="txtResult" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+            <TextArea fx:id="txtResult" editable="false" wrapText="true" />
+            <TextArea fx:id="secondaTxtArea" editable="false" />
          </children>
       </VBox>
    </center>
@@ -37,8 +38,16 @@
    <bottom>
       <HBox BorderPane.alignment="CENTER_RIGHT">
          <children>
-            <Button fx:id="btnReset" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#doReset" text="Reset" />
-            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancellaParola" text="Cancella" />
+            <Button fx:id="btnReset" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#doReset" text="Reset">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancellaParola" text="Cancella">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
    </bottom>
