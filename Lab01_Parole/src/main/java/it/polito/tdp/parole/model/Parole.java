@@ -28,15 +28,6 @@ public class Parole {
 	public void deleteParole(String p) {
 		parole.remove(p);
 	}
-
-	public LinkedList<String> getParole() {
-		return parole;
-	}
-
-	public void setParole(LinkedList<String> parole) {
-		this.parole = parole;
-	}
-	
 	
 
 }
