@@ -42,8 +42,14 @@ public class FXMLController {
 
 	@FXML
 	void cancellaParola(ActionEvent event) {
-		String parolaNuova = txtParola.getText();
+		
+		String parolaNuova = txtResult.getSelectedText();
+		
 		elenco.deleteParole(parolaNuova);
+		
+		for (String s : elenco.getElenco())
+			if (parolaNuova.contains(s))
+				elenco.deleteParole(s);
 
 		String testoFinale = "";
 		for (String s : elenco.getElenco())

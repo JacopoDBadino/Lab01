@@ -29,4 +29,14 @@ public class Parole {
 		parole.remove(p);
 	}
 
+	public LinkedList<String> getParole() {
+		return parole;
+	}
+
+	public void setParole(LinkedList<String> parole) {
+		this.parole = parole;
+	}
+	
+	
+
 }
