@@ -45,7 +45,7 @@ public class FXMLController {
 		
 		String parolaNuova = txtResult.getSelectedText();
 		
-		elenco.deleteParole(parolaNuova);
+		elenco.deleteParole(parolaNuova); 
 		
 		for (String s : elenco.getElenco())
 			if (parolaNuova.contains(s))
